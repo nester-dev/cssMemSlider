@@ -5,17 +5,22 @@
 }
 
 body {
-	background-color: #787a7a;
+	background-color: #2e2d2d;
+	padding: 0 2rem;
 }
 
 .wrapper {
 	max-width: 50rem;
-	height: 85vh;
-	padding: 5vh;
-	margin: 0 auto;
+	height: 34rem;
+	padding: 1.5rem;
+	margin: 5vh auto;
 	display: flex;
 	justify-content:center;
 	align-items: center;
+	border: 3px solid #222222;
+	background-color: #787a7a;
+	border-radius: 5px;
+	box-shadow: 0 0 50px rgb(0 0 0 / 50%);
 }
 
 .slider {
@@ -46,7 +51,6 @@ body {
 .slider-items .item img {
 	width: 100%;
 	max-height: 100%;
-	object-fit: contain;
 }
 
 .footer {
@@ -58,6 +62,13 @@ body {
 
 .footer .description {
 	display: flex;
+	align-items: center;
+}
+
+.footer .description .text {
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease 0s;
 }
 
 .slider-nav {
@@ -66,9 +77,15 @@ body {
 	gap: 5px;
 }
 
+
+
 .slider-nav .slider-nav-bullet {
-	padding: 1.5rem;
+	padding: 1rem;
 	cursor: pointer;
+}
+
+.slider-nav .slider-nav-bullet:last-of-type {
+	padding: 1rem 0 1rem 1rem;
 }
 
 .slider-nav .slider-nav-bullet .bullet {
@@ -97,4 +114,45 @@ body {
 }
 #q5:checked ~ .slider-items .move {
 	margin-left: -80%;
+}
+
+#q1:checked ~ .footer .slider-nav .bullet_1 {
+	background-color: #030303;
+}
+#q2:checked ~ .footer .slider-nav .bullet_2 {
+	background-color: #030303;
+}
+#q3:checked ~ .footer .slider-nav .bullet_3 {
+	background-color: #030303;
+}
+#q4:checked ~ .footer .slider-nav .bullet_4 {
+	background-color: #030303;
+}
+#q5:checked ~ .footer .slider-nav .bullet_5 {
+	background-color: #030303;
+}
+
+#q1:checked ~ .footer .description .text_1 {
+		opacity: 1;
+	visibility: visible;
+}
+#q2:checked ~ .footer .description .text_2 {
+	margin-left: -15%;
+		opacity: 1;
+	visibility: visible;
+}
+#q3:checked ~ .footer .description .text_3 {
+	margin-left: -35%;
+		opacity: 1;
+	visibility: visible;
+}
+#q4:checked ~ .footer .description .text_4 {
+	margin-left: -56%;
+		opacity: 1;
+	visibility: visible;
+}
+#q5:checked ~ .footer .description .text_5 {
+	margin-left: -95%;
+		opacity: 1;
+	visibility: visible;
 }
