@@ -12,15 +12,15 @@ body {
 .wrapper {
 	max-width: 50rem;
 	height: 34rem;
-	padding: 1.5rem;
+	padding: 1.2rem;
 	margin: 5vh auto;
 	display: flex;
 	justify-content:center;
 	align-items: center;
-	border: 3px solid #222222;
+	border: 0.2rem solid #222222;
 	background-color: #787a7a;
-	border-radius: 5px;
-	box-shadow: 0 0 50px rgb(0 0 0 / 50%);
+	border-radius: 1rem;
+	box-shadow: 0 0 3rem rgb(0 0 0 / 50%);
 }
 
 .slider {
@@ -63,6 +63,7 @@ body {
 .footer .description {
 	display: flex;
 	align-items: center;
+	white-space: nowrap;
 }
 
 .footer .description .text {
@@ -74,18 +75,18 @@ body {
 .slider-nav {
 	display: flex;
 	justify-content: space-between;
-	gap: 5px;
+	gap: 0.35rem;
 }
 
 
 
 .slider-nav .slider-nav-bullet {
-	padding: 1rem;
+	padding: 0.9rem;
 	cursor: pointer;
 }
 
 .slider-nav .slider-nav-bullet:last-of-type {
-	padding: 1rem 0 1rem 1rem;
+	padding: 0.9rem 0 0.9rem 0.9rem;
 }
 
 .slider-nav .slider-nav-bullet .bullet {
@@ -93,7 +94,7 @@ body {
 	width: 0.8rem;
 	height: 0.8rem;
 	border-radius: 50%;
-	border: 2px solid #3b3b3b;
+	border: 0.12rem solid #3b3b3b;
 }
 
 .slider-nav .slider-nav-bullet:hover > .bullet {
@@ -155,4 +156,33 @@ body {
 	margin-left: -95%;
 		opacity: 1;
 	visibility: visible;
+}
+
+@media (max-width: 700px){
+	.footer {
+		flex-direction: column-reverse;
+	}
+
+	.footer .description {
+		align-self: flex-start;
+	}
+}
+
+@media (max-width: 515px){
+	.wrapper {
+		height: auto;
+	}
+
+	.slider {
+		height: auto;
+	}
+
+	.slider-nav .slider-nav-bullet {
+		padding: 0.6rem;
+		cursor: pointer;
+	}
+	
+	.slider-nav .slider-nav-bullet:last-of-type {
+		padding: 0.6rem 0 0.6rem 0.6rem;
+	}
 }
